@@ -1,0 +1,6 @@
+<!ENTITY xulschoolhello.hello.label            "Hello World!">
+<!ENTITY xulschoolhello.hello.toolbarName      "MyTool">
+<!ENTITY xulschoolhello.helloWorld.tooltip		"Custom Tool!!">
+<!ENTITY xulschoolhello.toolbar.accesskey		"a">
+<!ENTITY xulschoolhello.helloMenu.accesskey    "l">
+<!ENTITY xulschoolhello.helloItem.accesskey    "H">

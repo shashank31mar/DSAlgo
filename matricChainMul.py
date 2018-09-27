@@ -5,9 +5,13 @@ Created on Fri Jun 15 09:55:23 2018
 
 @author: shashankgupta
 """
+'''
+Problem Reference:
+    https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/
+'''
 
 import math
-def matrixChainMultiplication(arr,algo='dp'):
+def matrixChainMultiplication(arr,algo='recur'):
     if algo == 'recur':
         return matrixChainMultiplicationRecurUtil(arr,1,len(arr)-1)
     elif algo == 'dp':
@@ -40,18 +44,19 @@ def matrixChainMultiplicationRecurUtil(arr,i,j):
         return 0
     
     min_size = math.inf
-    
+    print(i,j)
     for k in range(i,j):
+        print("k :",k)
         count = matrixChainMultiplicationRecurUtil(arr,i,k) \
                     + matrixChainMultiplicationRecurUtil(arr,k+1,j) \
                     +(arr[i-1] * arr[k] * arr[j])
-        #print(count)
+        print(count)
         min_size = min(min_size, count)
     return min_size
 
 def main():
-    arr = [10, 20, 30, 40, 30]
-    print("min product : {}".format(matrixChainMultiplication(arr)))
+    arr = [10, 20, 30, 40, 50]
+    print("min matrix operations : {}".format(matrixChainMultiplication(arr)))
 
 if __name__ == "__main__":
     main()

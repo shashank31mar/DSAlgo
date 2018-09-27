@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 23 18:05:35 2018
+
+@author: shashankgupta
+"""
+
+README:
+Program requires Python 3 to run.
+I have implement Recursive method first and from that it was easy for me
+to implement DP algo
+
+In the dp algo i have also printed the max length and max sequence.
+
+Code has comments that explains the whole approach.

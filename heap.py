@@ -18,8 +18,8 @@ class Heap:
             self.heap.append(x)
         self.heap_size = 0
         self.capacity = len(arr)
+        self.convertToHeap()
         
-    
     def parent(self,i):
         return  (i-1)//2
     
@@ -70,7 +70,9 @@ class MinHeap(Heap):
             return None
         if self.heap_size == 1:
             self.heap_size -= 1
-            return self.heap.remove(self.heap[0])
+            data = self.heap[0]
+            self.heap.remove(data)
+            return data
     
         min_ele = self.heap[0]
         self.heap[0] = self.heap[self.heap_size-1]
@@ -154,20 +156,22 @@ class MaxHeap(Heap):
         self.maxHeapify(0)
 
 def main():
-    arr = [10,9,8,7,6,5,4,3,2,1,1]
+    arr = [1]
     minH = MinHeap(arr)
     maxH = MaxHeap(arr)
-    minH.convertToHeap()
-    maxH.convertToHeap()
+    #minH.convertToHeap()
+    #maxH.convertToHeap()
     minH.printHeap()
     maxH.printHeap()
-    print(minH.getMin())
+    print(minH.extractMin())
+    '''
     minH.extractMin()
     minH.printHeap()
     print(minH.getMin())
     minH.replaceMin(11)
     minH.printHeap()
     print(minH.getMin())
+    '''
     
 
 if __name__ == "__main__":

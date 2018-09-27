@@ -67,6 +67,7 @@ class Stack:
         print("operation id :{}, Max :{}".format(opId,self.max_ele))
         
     def processOperations(self,operations):
+        
         for i,query in enumerate(operations):
             if int(query[0]) == 1:
                 for i in range(1,len(query)):
@@ -80,6 +81,7 @@ class Stack:
                 self.getMax(i)
             else:
                 print("Invalid Operations, continuing to next operations!")
+            print(self.max_stack)
 
 def main():
     #n = int(input())

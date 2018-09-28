@@ -1,16 +1,14 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Sep 23 18:05:35 2018
+Created on Fri Sep 28 13:48:38 2018
 
-@author: shashankgupta
+@author: shagupta
 """
 
-README:
-Program requires Python 3 to run.
-I have implement Recursive method first and from that it was easy for me
-to implement DP algo
+Program Required python 3 to run it
+I was to able to code the base algorithm as i had very less time to work on it due to other tasks that were already schedule.
+There are two file
+1) GenericHeap - Implements min and max Heaps
+2) CostSplittingApp - implements the algorithm using heaps
 
-In the dp algo i have also printed the max length and max sequence.
-
-Code has comments that explains the whole approach.
+Run CostSplittingApp - few examples are already given

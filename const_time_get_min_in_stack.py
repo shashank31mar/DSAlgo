@@ -35,7 +35,6 @@ class Stack:
         else:
             self.max_stack.append(val)
             
-    
     def pop(self):
         return self.popMax()
 

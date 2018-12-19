@@ -19,15 +19,17 @@ def comparator(item):
 def formBiggestNumber(arr):
     max_ele = max(arr)
     max_digit = len(str(max_ele)) + 1
+    print(max_digit)
     new_arr = [int((str(x)*max_digit)[:max_digit]) for x in arr]
     new_arr = dict(zip(arr,new_arr))
+    print(new_arr)
     new_arr = sorted(new_arr.items(),key=lambda x:x[1], reverse=True)
     print(new_arr)
     number = "".join([str(x[0]) for x in new_arr])
     return number
 
 def main():
-    arr = [98,9,1,112,99,4,998]
+    arr = [98,9,1,112,99,4,998,9999]
     print(formBiggestNumber(arr))
     
 if __name__ == "__main__":

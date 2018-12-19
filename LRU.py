@@ -54,7 +54,8 @@ class LRU:
         #Head is changing and is the next node
         else:
             self.head = node.next
-            
+        
+        #For the case when we are not at the tail
         if node.next:
             node.next.prev = node.prev
         else:
@@ -63,12 +64,12 @@ class LRU:
     def setHead(self,node):
         node.next = self.head
         node.prev = None
-        
+        # If head head exits, mean if there are some items in list
         if self.head:
             self.head.prev = node
             
         self.head = node
-        
+        # For the case when there is just one item in list
         if not self.end:
             self.end = self.head
             

@@ -41,8 +41,8 @@ def printRepeating(arr, size):
             
 def main():
     arr = [0,1,0,1,2,4,5,2]
-    arr1 = [0,1,2,3,4]
-    findDuplicates(arr)
+    arr1 = [0,1,2,3,3]
+    findDuplicates(arr1)
     
 if __name__ == "__main__":
     main()
